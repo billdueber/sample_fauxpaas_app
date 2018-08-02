@@ -1,0 +1,16 @@
+# Local stuff
+
+data_dir: ./data
+log_dir: ./log
+
+
+# We've changed the config files (e.g., cable.yml) to reference our Ettin
+# stuff in SampleFauxpaasApp::Config. On load, it'll attempt to fill in those
+# values, which means all those config paths need to exist in a loaded file.
+#
+# On production, those data are provided by A&E. For dev/test, we need to put
+# in placeholders so calls to the Ettin config object don't error out
+cable:
+  adapter: async
+  url: unused
+  channel_prefix: sample_fauxpaas_app
