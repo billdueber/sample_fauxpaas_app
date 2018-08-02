@@ -20,6 +20,8 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+# Production DB url comes from A&E via the A&E-maintained initializers.yml
 production:
   <<: *default
-  database: db/production.sqlite3
+  url: <%= SampleFauxpaasApp::Config.db.url %>
+
