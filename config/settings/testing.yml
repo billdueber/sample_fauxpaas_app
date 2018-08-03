@@ -14,3 +14,8 @@ cable:
   adapter: async
   url: unused
   channel_prefix: sample_fauxpaas_app
+
+solr:
+  url: <%= ENV['SOLR_URL'] || "http://127.0.0.1:9639/solr/med" %>
+
+
